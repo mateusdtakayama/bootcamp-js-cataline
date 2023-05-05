@@ -1,0 +1,18 @@
+body {
+    height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d8cfcf;
+}
+
+#load-users {
+    text-align: center;
+    background-color: blue;
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
