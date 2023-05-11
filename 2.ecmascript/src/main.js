@@ -123,3 +123,45 @@ const showState = ({cidade, state}) => {
 }
 
 showState(city)
+
+
+// rest pegar o resto
+
+const numeros = [1, 2, 3, 4, 5]
+
+const [first, second, ...rest] = numeros
+console.log(first, second, rest)
+
+const carro = {
+    marca: "bmw",
+    ano: 2013,
+    dono: "José",
+}
+
+const { ano, ...resto} = carro
+
+console.log(ano, resto)
+
+
+const sum = ( ...params ) => {
+    return params.reduce((total, next) => total + next )
+}
+
+console.log(sum(5, 10, 15, 20))
+
+// Spread despejar em algum lugar
+
+const numbers1 = [1, 2, 3, 4, 5]
+const numbers2 = [6, 7, 8, 9, 10]
+
+const numbers3 = [...numbers1, ...numbers2]
+
+console.log(numbers3)
+
+
+const carro2 = {
+    ...carro,
+    marca: "palio",
+}
+
+console.log(carro2)
