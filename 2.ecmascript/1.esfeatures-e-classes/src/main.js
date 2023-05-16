@@ -165,3 +165,113 @@ const carro2 = {
 }
 
 console.log(carro2)
+
+// func construtora
+
+function Car(brand, name) {
+    this.brand = brand
+    this.name = name
+}
+
+const civic = new Car('honda', 'civic')
+const palio = new Car('fiat', 'palio')
+
+console.log(civic)
+console.log(palio)
+
+class Automovel{
+    constructor(brand, name, price){
+      this.brand = brand
+      this.name = name
+      this.price = price
+    }
+    run(speed=10) {
+      return console.log(`Esse carro corre a uma velocidade de ${speed} km/h`)
+    }
+  }
+
+const corola = new Automovel('toyota', 'corola', 100)
+console.log(corola)
+corola.run(100)
+corola.run()
+
+
+// get e set
+
+class Fruit{
+constructor(name){
+    this._name = name
+}
+
+get name(){
+    return this._name
+}
+set name(value){
+    this._name = value
+}
+}
+
+const maca = new Fruit('maça')
+console.log(maca)
+maca.name = 'pera'
+console.log(maca)
+
+class Calculator{
+static sum(a, b){
+    return a+b
+}
+}
+
+console.log(Calculator.sum(3,5))
+
+
+class Person{
+constructor(firstName, secondName){
+    this.firstName = firstName
+    this.secondName = secondName
+}
+
+get fullName() {
+    return Person.joinNames(this.firstName, this.secondName)
+}
+
+static joinNames(firstName, secondName) {
+    return `${firstName} ${secondName}`
+}
+}
+
+const pablo = new Person("Pablo", "Escobar")
+
+console.log(pablo.fullName)
+
+//  herança
+
+class Veiculo {
+    constructor(rodas, preco){
+        this.rodas = rodas
+        this.preco = preco
+    }
+
+    acelerar() {
+        console.log("acelerou")
+    }
+}
+
+class Moto extends Veiculo{
+    constructor(rodas, preco, marca, nome) {
+        super(rodas, preco)
+        this.marca = marca
+        this.nome = nome
+    }
+    empinar(){
+        console.log("empinou")
+    }
+
+    acelerar(){
+        console.log("acelerou muito")
+    }
+}
+
+const r3 = new Moto(2, 100, "Yamaha", "R3")
+console.log(r3)
+r3.acelerar()
