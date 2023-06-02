@@ -47,24 +47,50 @@ enum StatusCodes {
     Accepted = 202,
     BadRequest = 400
   }
-  console.log(StatusCodes.NotFound);
-  console.log(StatusCodes.Success);
+console.log(StatusCodes.NotFound);
+console.log(StatusCodes.Success);
 
-  enum CardinalDirections {
-    North,
-    East,
-    South,
-    West
-  }
-  let currentDirection = CardinalDirections.East;
-  //log 1
-  console.log(currentDirection);
+enum CardinalDirections {
+  North,
+  East,
+  South,
+  West
+}
+let currentDirection = CardinalDirections.East;
+//log 1
+console.log(currentDirection);
 
-  enum Colors {
-    white = '#fff',
-    black = '#000',
-  }
+enum Colors {
+  white = '#fff',
+  black = '#000',
+}
 
-  let white : Colors
-  white = Colors.white
-  console.log(white)
+let white : Colors
+white = Colors.white
+console.log(white)
+
+// type union
+
+let age : number | string
+
+age = 20
+
+age = 'vinte'
+
+function showPet(pet : 'dog' | 'cat' | 'zebra'){
+  console.log(pet)
+}
+
+showPet("zebra")
+
+type Pet =  'dog' | 'cat' | 'zebra'
+
+function displayPet(pet : Pet){
+  console.log(pet)
+}
+
+displayPet("dog")
+
+let mensagem = 'paiva'
+
+mensagem.toUpperCase()
