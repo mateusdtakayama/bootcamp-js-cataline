@@ -1,0 +1,21 @@
+{
+  "name": "1.tipos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn --quiet --clear ./src/main.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "is-core-module": "^2.12.1",
+    "ts-node": "^10.9.1"
+  }
+}
